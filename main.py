@@ -178,7 +178,7 @@ def down(message,link):
                 if "-thumb.jpg" not in thumb:
                     os.remove(thumb)
         else:
-                app.send_document(message.chat.id, document=ele, caption=f"{partt}**{filename}**", thumb=thumbfile, force_document=True, reply_to_message_id=message.id, progress=progress, progress_args=[message])
+                app.send_document(message.chat.id, document=ele, caption=f"{partt}**{filename}**", thumb=thumbfile, force_document=False, reply_to_message_id=message.id, progress=progress, progress_args=[message])
         
         # deleting uploaded file
         os.remove(ele)
